@@ -10,9 +10,8 @@ var io = require('socket.io')(http, {
 
 io.on('connection', (socket) => {
 
-    socket.on('testSocket', () => {
-        io.emit('testSocket', () => {
-
+    socket.on('testSocket', (msg) => {
+        io.emit('testSocket', msg => {
         });
     });
 
